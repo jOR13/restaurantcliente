@@ -1,7 +1,8 @@
 import app, { firestore } from "firebase/app";
 import 'firebase/firestore';
+import 'firebase/storage';
 import firebaseConfig from "./config";
-import FirebaseContext from "./context";
+
 
 class Firebase {
   constructor() {
@@ -9,6 +10,7 @@ class Firebase {
       app.initializeApp(firebaseConfig);
     }
     this.db = app.firestore();
+    this.storage = app.storage();
   }
 }
 
